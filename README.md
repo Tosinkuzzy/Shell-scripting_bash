@@ -1,1 +1,1 @@
-Shell-scripting, execute all directory with ./File.
+More Shell-scripting, execute all directory with ./File.
