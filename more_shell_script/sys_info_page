@@ -4,7 +4,7 @@
 
 DELAY=3 #Number of seconds to display results
 
-while [[ "$REPLY" != o ]]; do
+while true; do
 clear
 cat <<- _EOF_
 Please Select:
@@ -22,6 +22,7 @@ if [[ $REPLY ==1 ]]; then
 echo "Hostname: $HOSTNAME"
 uptime
 sleep "$DELAY"
+continue
 fi
 if [[ "$REPLY" == 3 ]]; then
 if [[ "$(id -u)" -eq o ]]; then
@@ -32,6 +33,10 @@ echo "Home Space Utilization ($USER)"
 du -sh "$HOME"
 fi
 sleep "$DELAY"
+continue
+fi
+if [[ "$REPLY" == o ]]; then
+	break
 fi
 else
 echo "Invalid entry."
