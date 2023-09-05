@@ -1,10 +1,10 @@
-#!/bin/bash
+#!/bin/bash -x
 
 # debug: script to demonstrate common errors
 
-number=integer
+number=
 
-if [ $number = string ]; then
+if [ "$number" = 1 ]; then
 echo "Number is equal to 1."
 else
 echo "Number is not equal to 1."
