@@ -4,6 +4,7 @@
 
 number=1
 
+echo "number=$number" #DEBUG
 if [ $number = 1 ]; then
 echo "Number is equal to 1."
 else

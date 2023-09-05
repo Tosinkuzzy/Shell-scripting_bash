@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 
 # debug: script to demonstrate common errors
 
