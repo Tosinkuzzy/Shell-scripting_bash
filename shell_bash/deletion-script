@@ -1,0 +1,18 @@
+#!/bin/bash
+
+hugher=
+
+echo "preparing to delete files" >&2
+if [[ -d "$hugher" ]]; then
+if cd $hugher; then
+echo "deleting files" >&2
+rm *
+else
+echo "cannot cd to '$hugher'" >&2
+exit 1
+fi
+else
+echo "no such directory: '$hugher'" >&2
+exit 1
+fi
+echo "file deletion complete" >&2
