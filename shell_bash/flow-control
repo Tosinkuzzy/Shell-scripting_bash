@@ -3,5 +3,3 @@
 for-loop: script to generate A-Z using for loop
 
 for i in {A..Z}; do echo $i; done
-
-
