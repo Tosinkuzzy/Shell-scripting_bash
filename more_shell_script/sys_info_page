@@ -25,13 +25,20 @@ sleep "$DELAY"
 continue
 fi
 if [[ "$REPLY" == 3 ]]; then
+report_home_space () {
 if [[ "$(id -u)" -eq o ]]; then
-echo "Home Space Utilization (All Users)"
-du -sh /home/*
+cat <<- _EOF_
+<h2>Home Space Utilization (All Users)</h2>
+<pre>$(du -sh /home/*)</pre>
+_EOF_
 else
-echo "Home Space Utilization ($USER)"
-du -sh "$HOME"
+cat <<- _EOF_
+<h2>Home Space Utilization ($USER)</h2>
+<pre>du -sh "$HOME")</pre>
+_EOF_
 fi
+return
+}
 sleep "$DELAY"
 continue
 fi
